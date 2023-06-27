@@ -33,7 +33,7 @@
     $ cd ros2_control && git reset --hard 3dc62e28e3bc8cf636275825526c11d13b554bb6 && cd ..
     $ cd ros2_controllers && git reset --hard 83c494f460f1c8675f4fdd6fb8707b87e81cb197 && cd ..
     $ cd gazebo_ros2_control && git reset --hard 3dfe04d412d5be4540752e9c1165ccf25d7c51fb && cd ..
-    $ git clone -b ros2 --single-branch https://github.com/ros-planning/moveit_msgs
+    $ git clone -b foxy --single-branch https://github.com/ros-planning/moveit_msgs
     $ cd ~/ros2_ws
     $ rosdep update
     $ rosdep install --from-paths src --ignore-src --rosdistro foxy -r -y
@@ -101,12 +101,11 @@ $ ros2 launch dsr_launcher2 single_robot_gazebo.launch.py
 To use the moveit2 package, you need to install the following packages.
 ```bash
 $ cd ~/ros2_ws/src
-$ git clone https://github.com/ros-planning/moveit2
-$ git clone -b ros2 --single-branch https://github.com/ros-planning/warehouse_ros
-$ git clone -b ros2 --single-branch  https://github.com/ros-planning/warehouse_ros_mongo
-$ git clone -b ros2 --single-branch https://github.com/ros-planning/srdfdom
-$ git clone -b ros2 --single-branch https://github.com/ros-planning/geometric_shapes
-$ git clone -b use_new_joint_handle https://github.com/ShotaAk/fake_joint
+$ git clone -b foxy --single-branch https://github.com/ros-planning/moveit2
+$ git clone -b foxy --single-branch https://github.com/ros-planning/warehouse_ros
+$ git clone -b ros2 --single-branch https://github.com/ros-planning/warehouse_ros_mongo
+$ git clone -b foxy --single-branch https://github.com/ros-planning/geometric_shapes
+$ git clone -b use_new_joint_handle --single-branch https://github.com/ShotaAk/fake_joint
 ```
     
 Please do the additional work below to build a fake_joint package that is compatible with our ROS2 package.
